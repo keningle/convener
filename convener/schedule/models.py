@@ -1,6 +1,12 @@
 from django.db import models
 
 class Presenter(models.Model):
+    name = models.CharField(max_length=255)
+    company = models.CharField(max_length=255, required=False, null=True)
+    bio = models.TextField(required=False, null=True)
+    twitter = models.CharField(max_length=55, required=False, null=True)
+    url = models.URLField(required=False, null=True)
+
     class Meta:
         verbose_name = _('Presenter')
         verbose_name_plural = _('Presenters')
@@ -9,12 +15,15 @@ class Presenter(models.Model):
         pass
 
 class Location(models.Model):
+    building = models.CharField(max_length=150)
+    room = models.CharField(max_length=50)
+
     class Meta:
         verbose_name = _('Location')
         verbose_name_plural = _('Locations')
 
     def __unicode__(self):
-        pass
+        return building + ' ' + room
 
 class Track(models.Model):
     code = models.CharField(max_length=10)
