@@ -13,6 +13,8 @@ Convener is a event / conference schedule application.  It will include:
 
 The system is being built on Django 1.5 and Django Rest Framework for the backend and AngularJS for the front-end.
 
+Additional documentation will come as I get further into development.  If you would like to help out, submit a pull request or reach out to me on twitter [@ken_ingle](http://www.twitter.com/ken_ingle)
+
 # LICENSE
 
 The MIT License (MIT)
