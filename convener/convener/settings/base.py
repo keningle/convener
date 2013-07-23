@@ -15,10 +15,8 @@ USE_TZ = True
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    #'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
-
-
 
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
@@ -47,7 +45,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'grappelli',
     # Convener Applications
+    'schedule',
 )
 
 LOGGING = {

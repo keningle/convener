@@ -1,6 +1,6 @@
 # Local Development Settings
-from commune.settings.base import *
-import commune.settings.secure as secure_settings
+from convener.settings.base import *
+import convener.settings.secure as secure_settings
 import os
 
 DEBUG = True
@@ -22,15 +22,17 @@ DATABASES = {
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 MEDIA_ROOT = os.path.join(SITE_ROOT, '../../../media')
-MEDIA_URL = 'http://localhost:8000/media/'
+MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(SITE_ROOT, '../../../static')
-STATIC_URL = 'http://localhost:8000/static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = ()
 TEMPLATE_DIRS = (
     os.path.join(SITE_ROOT, '../../templates'),
 )
 
 SECRET_KEY = secure_settings.SECRET_KEY
+
+#ADMIN_MEDIA_PREFIX = STATIC_URL+'admin/'
 
 # Locally only installed development apps, core apps are part of base.py
 INSTALLED_APPS += ('debug_toolbar',)

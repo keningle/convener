@@ -1,2 +1,4 @@
 Django==1.5.1
-django-secure
+django-grappelli==2.4.5
+pillow==2.1.0
+mysql-python==1.2.4
