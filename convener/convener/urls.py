@@ -4,9 +4,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'convener.views.home', name='home'),
-    # url(r'^convener/', include('convener.foo.urls')),
+    url(r'^schedule/', include('schedule.urls')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     # enable the admin + grappelli:
     url(r'^admin/', include(admin.site.urls)),
