@@ -4,7 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^schedule/', include('schedule.urls')),
+    url(r'^api/schedule/', include('schedule.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     # enable the admin + grappelli:
